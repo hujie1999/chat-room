@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+</head>
+<body>
+    <h5 id="namebar"></h5>
+    <hr>
+    <p>公共频道</p>
+    <ul id="list"></ul>
+    <input type="text" id="message" placeholder="请输入信息">
+    <button id="sendbtn">发送信息</button>
+    <hr>
+    <p>在线用户列表</p>
+    <div id="onlineList">
+
+    </div>
+    <hr>
+    <p>发送私信</p>
+    <label for="target">
+        收件人：
+    </label>
+    <input type="text" id="target" placeholder="收件人Id">
+    <label for="private">
+        内容：
+    </label>
+    <input type="text" id="private" placeholder="请输入私信">
+    <button id="send_private_btn">发送私信</button>
+    <script src="./js/chat.js"></script>
+    <script>
+        (()=>{
+            const nameBar = document.querySelector('#namebar')
+            const username = window.localStorage.getItem('username')
+            nameBar.innerText = username
+
+
+        })()
+    </script>
+</body>
+</html>
